@@ -16,9 +16,10 @@ function App() {
     <>
       <h1>Counter React</h1>
       <h2>Counter Value : {counter}</h2>
-      <button onClick={addvalue}>Add Value</button>
+      <button onClick={addvalue}>Add Value curr={counter}</button>
       <br />
-      <button onClick={removevalue}>Remove Value</button>
+      <button onClick={removevalue}>Remove Value curr={counter}</button>
+      <footer>curr={counter}</footer>
     </>
   );
 }
