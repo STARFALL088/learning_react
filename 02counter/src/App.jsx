@@ -4,14 +4,13 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  let counter = 0;
+  let [counter, setCounter] = useState(0);
+  //let counter = 0;
   const addvalue = () => {
-    counter++;
-    console.log(counter);
+    setCounter(++counter);
   };
   const removevalue = () => {
-    counter--;
-    console.log(counter);
+    setCounter(--counter);
   };
   return (
     <>
