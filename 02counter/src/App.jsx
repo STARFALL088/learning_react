@@ -9,11 +9,18 @@ function App() {
   let [counter, setCounter] = useState(0);
   //let counter = 0;
   const addvalue = () => {
-    setCounter((counter = ++counter > max_val ? max_val : counter));
+    //setCounter((counter = ++counter > max_val ? max_val : counter));
+    setCounter((prevCounter) => Math.min(max_val, prevCounter + 1));
+    setCounter((prevCounter) => prevCounter + 1);
+
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
   };
   const removevalue = () => {
     setCounter((counter = --counter < min_val ? min_val : counter));
   };
+
   return (
     <>
       <h1>Counter React</h1>
